@@ -14,9 +14,11 @@ function TypewriterTitle({ text, typingSpeed = 150, className = "" }) {
       }, typingSpeed);
 
       return () => clearTimeout(timer);
-    } else {
+    }  else {
       setIsTypingComplete(true);
+      setCursorVisible(false); 
     }
+    
   }, [currentIndex, text, typingSpeed]);
 
   useEffect(() => {
@@ -25,6 +27,7 @@ function TypewriterTitle({ text, typingSpeed = 150, className = "" }) {
         setCursorVisible((prevVisible) => !prevVisible);
       }, typingSpeed );
       return () => clearInterval(blinkInterval);
+
     } else {
       setCursorVisible(true); 
     }
@@ -36,7 +39,7 @@ function TypewriterTitle({ text, typingSpeed = 150, className = "" }) {
   };
 
   return (
-    <h1 className={className} style={{ fontSize: '7.5rem', fontFamily: "Special Elite", color: '#000' }}>
+    <h1 className={className} style={{ fontFamily: "Special Elite",}}>
       {displayText}
       <span style={cursorStyle}>|</span>
     </h1>

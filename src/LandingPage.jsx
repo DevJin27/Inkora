@@ -1,47 +1,74 @@
 import React from 'react';
 import TypewriterTitle from './Typewriter';
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+
   const [startY, setStartY] = React.useState(null);
   const [changeInY, setChangeInY] = React.useState(0);
-  const [swiped,setSwiped] = React.useState(false);
+  const [isDragging, setIsDragging] = React.useState(false); // To track if the mouse button is pressed
 
+  // Touch Event Handlers
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     setStartY(touch.clientY);
-    console.log('Touch started at Y (React):', touch.clientY);
+    setIsDragging(true); // Treat touch as dragging
   };
 
   const handleTouchMove = (event) => {
+    if (!isDragging || startY === null || event.touches.length !== 1) return;
     const touch = event.touches[0];
     const currentY = touch.clientY;
     const difference = currentY - startY;
     setChangeInY(difference);
-
-    if (difference < 0) {
-      console.log('Vertical difference:', difference);
-    }
   };
 
   const handleTouchEnd = () => {
+    setIsDragging(false);
+    if (changeInY < -100) {
+      console.log('Swipe up detected (touch)');
+      navigate('/home');
+    }
     setStartY(null);
     setChangeInY(0);
-    if (changeInY < -100) {
-      console.log('Swipe up detected');
-      setSwiped(true);
-
-      
-    }
   };
-  
+
+  // Mouse Event Handlers
+  const handleMouseDown = (event) => {
+    setStartY(event.clientY);
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (event) => {
+    if (!isDragging || startY === null) return;
+    const currentY = event.clientY;
+    const difference = currentY - startY;
+    setChangeInY(difference);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (changeInY < -100) {
+      console.log('Swipe up detected (mouse)');
+      navigate('/home');
+    }
+    setStartY(null);
+    setChangeInY(0);
+  };
+
 
   return (
     <div>
       <div
-        className="bg-white-300 h-screen w-screen flex flex-col items-center justify-center"
+        className="bg-white-300 h-screen w-screen flex flex-col items-center justify-center select-none"
+        style={{ fontFamily: "Special Elite", touchAction: 'pan-y' }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown} 
+        onMouseMove={handleMouseMove} 
+        onMouseUp={handleMouseUp}  
       >
         <TypewriterTitle text={"Inkoraa"} typingSpeed={275} className="text-[10vw] color-[#000]" />
         <p className="text-[3vw] text-center">Swipe | Match | Trade</p>
@@ -49,3 +76,4 @@ export default function LandingPage() {
     </div>
   );
 }
+

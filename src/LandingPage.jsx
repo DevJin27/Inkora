@@ -28,7 +28,7 @@ export default function LandingPage() {
     setIsDragging(false);
     if (changeInY < -100) {
       console.log('Swipe up detected (touch)');
-      navigate('/home');
+      navigate('/authentication');
     }
     setStartY(null);
     setChangeInY(0);
@@ -50,8 +50,8 @@ export default function LandingPage() {
   const handleMouseUp = () => {
     setIsDragging(false);
     if (changeInY < -100) {
-      console.log('Swipe up detected (mouse)');
-      navigate('/home');
+      console.log('Swipe up detected (mouse ya trackpad)');
+      navigate('/authentication');
     }
     setStartY(null);
     setChangeInY(0);

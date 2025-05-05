@@ -9,7 +9,7 @@ export default function LandingPage() {
   const [changeInY, setChangeInY] = React.useState(0);
   const [isDragging, setIsDragging] = React.useState(false); // To track if the mouse button is pressed
 
-  // Touch Event Handlers
+
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     setStartY(touch.clientY);
@@ -28,7 +28,7 @@ export default function LandingPage() {
     setIsDragging(false);
     if (changeInY < -100) {
       console.log('Swipe up detected (touch)');
-      navigate('/authentication');
+      navigate('/');
     }
     setStartY(null);
     setChangeInY(0);
@@ -51,7 +51,7 @@ export default function LandingPage() {
     setIsDragging(false);
     if (changeInY < -100) {
       console.log('Swipe up detected (mouse ya trackpad)');
-      navigate('/authentication');
+      navigate('/');
     }
     setStartY(null);
     setChangeInY(0);

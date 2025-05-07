@@ -31,7 +31,7 @@ export default function AuthPage() {
           theme="light"
           providers={['google']}
           socialLayout="vertical"
-          redirectTo={`${window.location.origin}/home`}
+          redirectTo={`${window.location.origin}/buy`}
           magicLink={true}
           showLinks={true} 
         />

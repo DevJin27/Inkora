@@ -1,19 +1,19 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import TypewriterTitle from './Typewriter';
 import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
   const navigate = useNavigate();
 
-  const [startY, setStartY] = React.useState(null);
-  const [changeInY, setChangeInY] = React.useState(0);
-  const [isDragging, setIsDragging] = React.useState(false); // To track if the mouse button is pressed
+  const [startY, setStartY] = useState(null);
+  const [changeInY, setChangeInY] = useState(0);
+  const [isDragging, setIsDragging] = useState(false); // To track if the mouse button is pressed
 
 
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     setStartY(touch.clientY);
-    setIsDragging(true); // Treat touch as dragging
+    setIsDragging(true); 
   };
 
   const handleTouchMove = (event) => {
@@ -28,7 +28,7 @@ export default function LandingPage() {
     setIsDragging(false);
     if (changeInY < -100) {
       console.log('Swipe up detected (touch)');
-      navigate('/');
+      navigate('/auth');
     }
     setStartY(null);
     setChangeInY(0);
@@ -51,7 +51,7 @@ export default function LandingPage() {
     setIsDragging(false);
     if (changeInY < -100) {
       console.log('Swipe up detected (mouse ya trackpad)');
-      navigate('/');
+      navigate('/auth');
     }
     setStartY(null);
     setChangeInY(0);

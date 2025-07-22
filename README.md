@@ -1,4 +1,4 @@
-# 📚 E-Commerce Bookstore
+# 📚 Inkoraa Bookstore
 
 A fully responsive and dynamic e-commerce bookstore built with **React + Vite**. This project utilizes the **Google Books API** for fetching and displaying books, featuring a seamless search bar, dynamic product detail pages, add-to-cart functionality, and a responsive design for an optimal user experience across all devices.
 
@@ -27,7 +27,7 @@ A fully responsive and dynamic e-commerce bookstore built with **React + Vite**.
 
 - **Frontend:** React (with Vite)
 - **Styling:** CSS (or any specific library/framework used)
-- **API:** Google Books API
+- **API:** Google Books API , SupaBase
 
 ---
 

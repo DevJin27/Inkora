@@ -1,0 +1,2402 @@
+@font-face {
+  font-family: sathoshi;
+  src: url(../public/fonts/sathoshi.ttf);
+}
+
+@font-face {
+  font-family: integralcf;
+  src: url(../public/fonts/integralcf.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+.custom-scroll-container {
+  height: 100vh; /* Full height container */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  padding: 0px !important;
+  overflow-x: hidden;
+}
+
+.custom-scroll-container::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb {
+  background: black; /* Scrollbar color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+
+.custom-scroll-container::-webkit-scrollbar-track {
+  background: rgb(235, 235, 235); /* Track background */
+}
+
+#root {
+  padding: 0px !important;
+}
+
+:root {
+  --color-primary: #333;
+  --color-secondary: #f1f1f1;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/********* Theme button CSS Start **********/
+
+.theme_dark {
+  background-color: #000;
+  color: #fff;
+  padding: 14px 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  transition: all 0.6s ease;
+  font-family: "sathoshi";
+  font-size: 16px;
+}
+
+.theme_dark:hover {
+  background: transparent;
+  color: #000;
+}
+
+/********* Theme button CSS End **********/
+
+/********* Header Main CSS Start **********/
+
+header.header-main {
+  padding: 5px 0px 8px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 130px;
+}
+
+.header-logo img:focus {
+  outline: none;
+}
+
+nav.header-nav {
+  height: 100%;
+}
+
+.login-cart-btn button svg {
+  width: 25px;
+  height: 25px;
+  margin: 2px 0px 0px 0px;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav.header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100%;
+  gap: 50px;
+}
+
+.header-nav ul li a {
+  position: relative;
+  color: #000;
+  font-family: sathoshi;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-nav ul li a::before {
+  position: absolute;
+  content: "";
+  background: #000;
+  height: 3px;
+  width: 0%;
+  bottom: -5px;
+  transition: all 0.6s ease;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50px;
+}
+
+.header-nav ul li a:hover:before {
+  width: 100%;
+}
+
+.search-popup {
+  display: none;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #f0f0f0;
+  font-family: sathoshi;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.login-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  height: 100%;
+  position: relative;
+}
+
+span.cart-count {
+  position: absolute;
+  right: 32px;
+  top: 17px;
+  background: red;
+  color: #fff;
+  line-height: 10px;
+  padding: 3px 4px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.search-bar {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 0px;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  color: #fff;
+  background: #000;
+  font-family: sathoshi;
+  transition: all 0.6s ease;
+}
+
+.search-bar button:hover {
+  background: transparent;
+  color: #000;
+}
+
+.search-bar button:focus {
+  outline: none;
+}
+
+/********* Header Main CSS ENd **********/
+
+/********* First Banner Section CSS Start **********/
+
+section.firt-banner-sec {
+  background-color: #f2f0f1;
+  padding: 50px 0px 50px 0px;
+}
+
+.first-banner-txt h2 {
+  font-family: integralcf;
+  font-size: 64px;
+  line-height: 65px;
+  font-weight: bold;
+  color: #000;
+  margin: 0px 0px 20px 0px;
+  padding: 60px 0px 0px 0px;
+}
+
+.first-banner-txt p {
+  font-family: "sathoshi";
+  color: #000;
+  font-size: 16px;
+  margin: 0px 0px 20px 0px;
+}
+
+.book-slider-img {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-slider-img img {
+  width: 300px;
+  height: 420px;
+}
+
+.first-banner-img {
+  margin: 50px 120px 100px 120px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 1 !important;
+  color: black !important;
+}
+
+.multipledata-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0px 0px 0px;
+}
+
+.international-brands h5 {
+  font-family: "sathoshi";
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0px;
+  color: #000;
+}
+
+.quality-books h5 {
+  font-family: "sathoshi";
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0px;
+  color: #000;
+}
+
+.happy-customers h5 {
+  font-family: "sathoshi";
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0px;
+  color: #000;
+}
+
+.happy-customers p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-family: "sathoshi";
+}
+
+.international-brands p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-family: "sathoshi";
+}
+
+.quality-books p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-family: "sathoshi";
+}
+
+.international-brands {
+  position: relative;
+}
+
+.international-brands::before {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 1px;
+  top: 0px;
+  background: #0000001a;
+  right: -45px;
+}
+
+.quality-books {
+  position: relative;
+}
+
+.quality-books::before {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 1px;
+  top: 0px;
+  background: #0000001a;
+  right: -45px;
+}
+
+.counter-plus {
+  display: flex;
+  align-items: center;
+}
+
+.counter-plus span {
+  font-family: "sathoshi";
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+}
+
+/********* First Banner Section CSS End **********/
+
+/********* Brand Logo Slider Section Start **********/
+
+.brand-logo-slider {
+  background-color: #000;
+  padding: 50px 0px;
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/********* Brand Logo Slider Section End **********/
+
+/********* Dress Style Section Start **********/
+
+section.dress-style-sec {
+  padding: 50px 0px;
+}
+
+.dress-bg {
+  background-color: #f0f0f0;
+  padding: 60px 64px;
+  border-radius: 30px;
+}
+
+.section-heading {
+  text-align: center;
+  font-family: "integralcf";
+  font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  padding: 0px 0px 55px 0px;
+}
+
+.dress-style-img {
+  margin: 0px 0px 30px 0px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dress-style-img img {
+  width: 100%;
+  height: 289px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+}
+
+.dress-style-img img:hover {
+  transform: scale(1.1);
+}
+
+.dress-style-img h6 {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-family: "sathoshi";
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/********* Dress Style Section End **********/
+
+/********* Subscribe Newsletter Section Start **********/
+
+.bg-newsletter {
+  background-color: black;
+  padding: 43px 64px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: -100px;
+}
+
+.subcribe-newsletter-head h2 {
+  color: #fff;
+  font-family: "integralcf";
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.subcribe-newsletter-form form input {
+  display: block;
+  width: 100%;
+  padding: 12px 20px 12px 50px;
+  border: none;
+  border-radius: 30px;
+  margin: 0px 0px 10px 0px;
+  font-family: "sathoshi";
+  color: #000;
+}
+
+.subcribe-newsletter-form form input:focus {
+  outline: none;
+}
+
+.subcribe-newsletter-form form button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #000;
+  font-family: "sathoshi";
+  font-weight: 500;
+  transition: all 0.6s ease;
+  font-size: 16px;
+}
+
+.subcribe-newsletter-form form button:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.subcribe-newsletter-form form button:focus {
+  outline: none;
+}
+
+.subscribe-input {
+  position: relative;
+}
+
+.subscribe-input span {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/********* Subscribe Newsletter Section End **********/
+
+/********* Footer Main Section Start **********/
+
+footer.footer-sec {
+  background-color: #f0f0f0;
+  padding: 170px 0px 50px 0px;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-logo p {
+  font-family: "sathoshi";
+  padding: 0px 150px 0px 0px;
+  font-size: 14px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  font-family: "sathoshi";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0px 0px 26px 0px;
+}
+
+.footer-logo img {
+  padding: 0px 0px 25px 0px;
+}
+
+.footer-links ul li a {
+  font-family: "sathoshi";
+  font-size: 16px;
+  margin: 0px 0px 10px 0px;
+  display: inline-block;
+  color: #000;
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-copyright ul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.footer-copyright p {
+  font-family: "sathoshi";
+  font-size: 14px;
+}
+
+.footer-logo ul {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 30px 0px 0px 0px;
+}
+
+.footer-logo ul li a {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 4px 9px 8px 9px;
+  border-radius: 30px;
+  background: #fff;
+  transition: all 0.6s ease;
+}
+
+.footer-logo ul li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/********* Footer Main Section End **********/
+
+/********* New Arrival book Section Start **********/
+
+section.arrival-books-sec {
+  padding: 70px 0px;
+}
+
+.book-card img {
+  background: #f0eeed;
+  padding: 50px;
+  border-radius: 20px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.card-detail {
+  margin: 20px 10px 10px 10px;
+}
+
+.book-card {
+  margin: 0px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
+  transform: translate(0px, 0px);
+  transition: all 0.6s ease;
+}
+
+.book-card:hover {
+  transform: translate(0px, -20px);
+}
+
+.card-detail h5 {
+  font-family: "sathoshi";
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+}
+
+.book-card h6 {
+  font-family: "sathoshi";
+  font-size: 14px;
+}
+
+.book-card h4 {
+  font-family: "sathoshi";
+  font-size: 24px;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.book-card .theme_dark {
+  padding: 10px 30px;
+  margin: 0px 0px 0px 10px;
+}
+
+/********* New Arrival book Section End **********/
+
+/********* About Us page Section Start **********/
+
+.about-innerbanner {
+  background-image: url("../src/images/about-inner-banner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.about-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.about-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.about-img img {
+  width: 100%;
+  padding: 60px 40px 20px 10px;
+  height: 490px;
+  object-fit: cover;
+}
+
+section.about-us-sec {
+  padding: 50px 0px;
+}
+
+.about-us-text h2 {
+  font-family: "integralcf";
+  font-size: 50px;
+  margin: 0px 0px 20px 0px;
+  color: #000;
+}
+
+.about-us-text {
+  padding: 30px 0px 0px 0px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-us-text p {
+  font-family: "sathoshi";
+  font-size: 18px;
+  padding: 0px 80px 0px 0px;
+  font-weight: 500;
+}
+
+.about-us-text p span {
+  font-weight: bold;
+}
+
+/********* About Us page Section End **********/
+
+/********* Why Choose Us page Section Start **********/
+
+.whychooseus-sec {
+  padding: 50px 0px 100px 0px;
+}
+
+.whychooseus-card {
+  padding: 50px;
+  text-align: center;
+  height: 290px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px -20px 36px -18px inset;
+  transition: all 0.6s ease;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+}
+
+.whychooseus-card:hover {
+  transform: translate(0px, -10px);
+}
+
+.whychooseus-card h6 {
+  font-size: 40px;
+  line-height: 20px;
+  margin: 0px 0px 10px 0px;
+}
+
+.whychooseus-card h4 {
+  font-size: 22px;
+  font-family: "sathoshi";
+  color: #000;
+}
+
+.whychooseus-card p {
+  font-family: "sathoshi";
+  color: #000;
+}
+
+/********* Why Choose Us page Section End **********/
+
+/********* Contact Us page Section Start **********/
+
+.contact-innerbanner {
+  background-image: url("../src/images/contact-inner-banner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.contact-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.contact-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+section.contactus-sec {
+  padding: 70px 0px;
+}
+
+.contactus-sec .form-main {
+  padding: 40px;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contactus-sec .form .form-group input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #e6e2f5;
+  padding: 9px 20px;
+  color: #000;
+  border-radius: 0px;
+  font-weight: 400;
+  background-color: transparent;
+  font-family: "sathoshi";
+}
+
+.contactus-sec .form .form-group textarea {
+  height: 150px;
+  width: 100%;
+  border: 1px solid #e6e2f5;
+  padding: 15px 20px;
+  color: #000;
+  border-radius: 0px;
+  resize: none;
+  font-weight: 400;
+  background-color: transparent;
+  font-family: "sathoshi";
+}
+
+.contactus-sec .form .form-group label {
+  color: #000;
+  position: relative;
+  font-family: "sathoshi";
+  margin: 0px 0px 10px 0px;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.contactus-sec .form .form-group label span {
+  color: #ff2c18;
+  display: inline-block;
+  position: absolute;
+  right: -12px;
+  top: 0px;
+  font-size: 16px;
+}
+
+.contactus-sec .form-main .title h4 {
+  font-family: "sathoshi";
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.contactus-sec .form-main .title {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.contactus-sec .form-main .title h3 {
+  font-family: "sathoshi";
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.contactus-sec .form-main .button .theme_dark {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.contactus-sec .form-main .button {
+  text-align: center;
+}
+
+/********* Contact Us page Section End **********/
+
+/********* Shop page Section Start **********/
+
+section.shop-product-sec {
+  padding: 70px 0px;
+}
+
+.shop-innerbanner {
+  background-image: url("../src/images/shop-innerbanner.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.shop-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.shop-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.view-all-btn {
+  text-align: center;
+  padding: 50px 0px 0px 0px;
+}
+
+.view-all-btn .theme_dark {
+  font-size: 18px;
+  padding: 15px 60px;
+}
+
+/********* Shop page Section End **********/
+
+/********* Product Detail Page Section Start **********/
+
+.productdetail-innerbanner {
+  background-image: url("../src/images/productdetail-banner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.productdetail-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.productdetail-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+section.product-detail-sec {
+  padding: 50px 0px;
+}
+
+.product-detail-txt h2 {
+  font-family: "sathoshi";
+  font-weight: bold;
+  color: #000;
+  font-size: 40px;
+  margin: 0px 0px 20px 0px;
+}
+
+.product-detail-txt h3 {
+  font-size: 16px;
+  font-family: "sathoshi";
+  color: #000;
+}
+
+.product-detail-txt h4 {
+  font-size: 30px;
+  color: goldenrod;
+}
+
+.product-detail-txt p {
+  color: #000;
+  font-family: "sathoshi";
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: calc(1.5em * 12);
+  line-height: 1.5;
+}
+
+.product-detail-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.product-detail-img img {
+  width: 350px;
+}
+
+.cart-counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  width: fit-content;
+  padding: 5px 20px;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+}
+
+.cart-counter button {
+  border: none;
+  background: transparent;
+  font-family: "sathoshi";
+  font-size: 20px;
+}
+
+.cart-counter span {
+  font-family: "sathoshi";
+  font-size: 20px;
+}
+
+.product-detail-txt .theme_dark {
+  line-height: 20px;
+  padding: 12px 30px 12px 20px;
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.product-detail-txt .theme_dark svg {
+  margin: 0px 10px 0px 0px;
+}
+
+/********* Product Detail Page Section End **********/
+
+/********* Sidebar CSS Start **********/
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 99;
+  transform: translateX(0%);
+  transition: transform 0.6s ease;
+  /* Smooth transition */
+}
+
+/* Transition states for when the sidebar enters and exits */
+.cart-sidebar.sidebar-enter {
+  transform: translateX(0%);
+  /* Off-screen */
+}
+
+.cart-sidebar.sidebar-enter-active {
+  transform: translateX(100%);
+  /* Smoothly move into view */
+}
+
+.cart-sidebar.sidebar-exit {
+  transform: translateX(0);
+  /* Currently in view */
+}
+
+.cart-sidebar.sidebar-exit-active {
+  transform: translateX(100%);
+  /* Smoothly move out of view */
+}
+
+.cart-sidebar .sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-sidebar .sidebar-body {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.cart-sidebar .sidebar-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-sidebar .sidebar-body li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.cart-sidebar .sidebar-footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.login-cart-btn button {
+  border: none;
+  background: transparent;
+}
+
+.sidebar-header h3 {
+  font-family: "sathoshi";
+  color: #000;
+  margin: 0px;
+}
+
+.sidebar-header button {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+}
+
+.cart-sidebar .sidebar-body p {
+  font-family: "sathoshi";
+}
+
+.cart-sidebar .sidebar-footer a {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 7px 20px;
+  font-family: "sathoshi";
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  transition: all 0.6s ease;
+}
+
+.cart-sidebar .sidebar-footer a:focus {
+  outline: none;
+}
+
+.cart-sidebar .sidebar-footer a:hover {
+  background: transparent;
+  color: #000;
+}
+
+.cart-sidebar .sidebar-body ul li img {
+  width: 60px;
+}
+
+.sidebar-product-trashbtn button {
+  background: #482f2f00;
+  border: none;
+  color: red;
+}
+
+.cart-sidebar-text h4 {
+  font-size: 14px;
+  font-family: "sathoshi";
+  margin: 0px 0px 1px 0px;
+}
+
+.sidebar-product-trashbtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 10%;
+}
+
+.cart-sidebar-text {
+  width: 100%;
+}
+
+.cart-sidebar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  width: fit-content;
+  padding: 0px 9px;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+}
+
+.cart-sidebar-actions button {
+  border: none;
+  background: transparent;
+  font-family: "sathoshi";
+  font-size: 16px;
+}
+
+.cart-sidebar-text p {
+  margin: 0px 0px 2px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "sathoshi";
+}
+
+.total-cost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+}
+
+.total-cost p {
+  margin: 0px;
+  font-family: "sathoshi";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.total-cost h5 {
+  font-family: "sathoshi";
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+/********* Sidebar CSS End **********/
+
+/********* Our Customer Review CSS Start **********/
+
+section.our-customer-reviews {
+  padding: 50px 0px 100px 0px;
+}
+
+.our-customer-header h2 {
+  font-size: 48px;
+  font-family: "integralcf";
+  color: #000;
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+}
+
+.review-card {
+  padding: 28px 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  height: 260px;
+  margin: 0px 20px;
+}
+
+.review-card:focus {
+  outline: none;
+}
+
+.review-stars {
+  color: #ffc633;
+  font-size: 20px;
+}
+
+.review-name h4 {
+  font-family: "sathoshi";
+  font-weight: 600;
+  font-size: 22px;
+  margin: 10px 0px;
+}
+
+.review-text p {
+  font-family: "sathoshi";
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.review-name h4 svg {
+  color: #01ab31;
+}
+
+/********* Our Customer Review CSS End **********/
+
+/********* Login Page CSS Start **********/
+
+.login-innerbanner {
+  background-image: url("../src/images/login-banner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.login-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.login-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.login_register {
+  background: #ffffff;
+  padding: 50px;
+  box-shadow: 1px 3px 10px #d8d8d8;
+}
+
+.login_register form input {
+  font-family: "sathoshi";
+  display: inline-block;
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 0.25rem;
+  border: 2px solid #00000017;
+}
+
+.login_register input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #000;
+}
+
+.login_register .btn-login {
+  display: block;
+  background: #fff;
+  padding: 18px 50px;
+  border: 1px solid #f1582c;
+  color: #f1582c;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login_register .btn-login:hover {
+  background: #f1582c;
+  color: #fff;
+}
+
+.login_register .right_link {
+  color: #000;
+  margin-top: 15px;
+  transition: all 0.6s ease;
+  display: inline-block;
+  font-family: "sathoshi";
+  margin: 30px 0px 0px 0px;
+}
+
+.login_register .right_link:hover {
+  text-decoration: underline;
+}
+
+.create-account-link {
+  color: #000;
+  display: inline-block;
+  margin-top: 10px;
+  transition: all 0.6s ease;
+  font-family: "sathoshi";
+}
+
+.create-account-link:hover {
+  text-decoration: underline;
+}
+
+section.login-sec {
+  padding: 100px 0px;
+}
+
+.login_register h3 {
+  font-family: "integralcf";
+  text-align: center;
+  margin: 0px 0px 40px 0px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.login_register form button {
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+  font-family: "sathoshi";
+}
+
+.login-btn {
+  font-family: "sathoshi";
+  color: #000;
+}
+
+/********* Login Page CSS End **********/
+
+/********* Signup Page CSS Start **********/
+
+.signup-innerbanner {
+  background-image: url("../src/images/signup-bannner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.signup-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.signup-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/********* Signup Page CSS End **********/
+
+/********* Checkout Page CSS Start **********/
+
+.checkout-innerbanner {
+  background-image: url("../src/images/checkout-banner.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0px;
+  position: relative;
+}
+
+.checkout-innerbanner::before {
+  position: absolute;
+  content: "";
+  background: #00000075;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.checkout-banner-text h2 {
+  font-size: 80px;
+  font-family: "integralcf";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.payment-section {
+  padding: 70px 0px;
+}
+
+.payment-head h3 {
+  font-family: "sathoshi";
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0px 0px 20px 0px;
+  color: #000;
+}
+
+.order-summary h3 {
+  font-family: "sathoshi";
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0px 0px 20px 0px;
+  color: #000;
+}
+
+.input-box {
+  margin: 0px 0px 10px 0px;
+}
+
+.input-box label {
+  font-family: "sathoshi";
+  font-size: 16px;
+  color: #000;
+  margin: 0px 0px 10px 0px;
+}
+
+.input-box input {
+  font-family: "sathoshi";
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.payment-btn button {
+  line-height: 20px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 8px;
+  padding: 15px 25px;
+}
+
+.order-summary {
+  padding: 30px;
+  background: #ebebeb;
+  border-radius: 7px;
+}
+
+.order-summary ul li {
+  font-family: "sathoshi";
+  margin: 0px 0px 10px 0px;
+  font-weight: 500;
+}
+
+/********* Checkout Page CSS End **********/
+
+
+/********* Sidebar menu CSS Start **********/
+
+
+.menu-popup {
+  position: fixed;
+  background: #000;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all .6s ease;
+}
+
+.sidebar-logo-closebtn a img {
+  filter: invert(1);
+  width: 120px;
+}
+
+.sidebar-logo-closebtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px 0px 20px;
+}
+
+
+nav.sidemenu ul li a {
+  font-family: 'sathoshi';
+  font-size: 24px;
+  color: #fff;
+}
+
+
+.sidebar-logo-closebtn button.close-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 50px;
+  line-height: 30px;
+}
+
+
+nav.sidemenu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+}
+
+nav.sidemenu ul li {
+  padding: 10px 20px;
+}
+
+nav.sidemenu {
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px 70px 0px;
+}
+
+/********* Sidebar menu CSS End **********/
+
+
+
+/******** Responsive CSS Start ********/
+
+@media screen and (max-width: 1280px) {
+  .first-banner-txt h2 {
+    font-size: 55px;
+  }
+
+  .international-brands::before {
+    height: 75px;
+    width: 1px;
+    top: 11px;
+    right: -22px;
+  }
+
+  .quality-books::before {
+    height: 75px;
+    width: 1px;
+    top: 11px;
+    right: -22px;
+  }
+
+  .review-card {
+    height: 280px;
+  }
+
+  .search-bar {
+    margin: 0px 20px 0px 0px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  nav.header-nav ul {
+    gap: 30px;
+  }
+
+  .first-banner-txt h2 {
+    font-size: 47px;
+    line-height: 55px;
+    padding: 30px 0px 0px 0px;
+  }
+
+  .first-banner-img {
+    margin: 50px 90px 70px 90px;
+  }
+
+  .book-slider-img img {
+    width: 260px;
+    height: 380px;
+  }
+
+  .multipledata-count {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .international-brands {
+    line-height: 20px;
+  }
+
+  .international-brands h5 {
+    font-size: 30px;
+  }
+
+  .international-brands p {
+    font-size: 12px;
+  }
+
+  .international-brands::before {
+    height: 50px;
+    top: 6px;
+    right: -22px;
+  }
+
+  .counter-plus {
+    line-height: 20px;
+  }
+
+  .counter-plus h5 {
+    font-size: 30px;
+  }
+
+  .quality-books p {
+    font-size: 14px;
+  }
+
+  .happy-customers p {
+    font-size: 14px;
+  }
+
+  .quality-books::before {
+    height: 50px;
+    top: 6px;
+    right: -22px;
+  }
+
+  .section-heading {
+    font-size: 38px;
+    padding: 0px 0px 45px 0px;
+  }
+
+  .book-card img {
+    padding: 30px;
+    border-radius: 10px;
+    height: 250px;
+  }
+
+  .card-detail h5 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .view-all-btn {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .arrival-books-sec {
+    padding: 50px 0px;
+  }
+
+  .dress-style-img img {
+    height: 190px;
+    border-radius: 10px;
+  }
+
+  .dress-style-img h6 {
+    top: 30px;
+    left: 20px;
+    font-size: 26px;
+    color: #000;
+  }
+
+  .dress-bg {
+    padding: 50px 54px;
+    border-radius: 20px;
+  }
+
+  .our-customer-header h2 {
+    font-size: 38px;
+    margin: 0px 0px 40px 0px;
+  }
+
+  .review-card {
+    padding: 18px 22px;
+    height: 260px;
+    margin: 0px 10px;
+  }
+
+  .review-text p {
+    font-size: 14px;
+  }
+
+  .subcribe-newsletter-head h2 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .bg-newsletter {
+    padding: 33px 34px;
+    border-radius: 10px;
+    margin-bottom: -80px;
+  }
+
+  .footer-logo p {
+    padding: 0px 70px 0px 0px;
+  }
+
+  .footer-links ul li a {
+    font-size: 14px;
+  }
+
+  footer.footer-sec {
+    padding: 130px 0px 10px 0px;
+  }
+
+  .about-us-text p {
+    font-size: 18px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .about-img img {
+    padding: 60px 0px 0px 0px;
+    height: 490px;
+  }
+
+  .whychooseus-card {
+    padding: 40px;
+    height: 300px;
+    transform: translate(0px, 0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .whychooseus-card p {
+    font-family: "sathoshi";
+    color: #000;
+    font-size: 16px;
+  }
+
+  .whychooseus-card h4 {
+    font-size: 22px;
+    color: #000;
+  }
+
+  .whychooseus-sec {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .shop-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .about-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .about-banner-text h2 {
+    font-size: 60px;
+  }
+
+  section.shop-product-sec {
+    padding: 70px 0px 0px 0px;
+  }
+
+  .product-detail-img img {
+    width: 300px;
+  }
+
+  .productdetail-innerbanner {
+    padding: 120px 0px;
+  }
+
+
+  .productdetail-banner-text h2 {
+    font-size: 60px;
+  }
+
+  .shop-banner-text h2 {
+    font-size: 60px;
+  }
+
+  .contact-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .contact-banner-text h2 {
+    font-size: 60px;
+  }
+
+  .contactus-sec .form .form-group input {
+    border-radius: 3px;
+  }
+
+  .checkout-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .checkout-banner-text h2 {
+    font-size: 60px;
+  }
+
+  .counter-plus span {
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width: 786px) {
+  .header-main .container .row .col-lg-4 {
+    display: none;
+  }
+
+  .header-main .container .row .col-lg-5 {
+    display: none;
+  }
+
+  .login-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .login-banner-text h2 {
+    font-size: 60px;
+  }
+
+  span.cart-count {
+    right: 32px;
+    top: 16px;
+  }
+
+  .search-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .search-popup .close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 50px;
+    top: 0px;
+    position: absolute;
+    right: 40px;
+  }
+
+  .search-popup input:focus {
+    outline: none;
+  }
+
+  .search-popup input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'sathoshi';
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  .login-cart-btn button svg {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .first-banner-img {
+    margin: 50px 30px 30px 30px;
+  }
+
+  .first-banner-txt h2 {
+    font-size: 31px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    margin: 0px 0px 8px 0px;
+  }
+
+  .multipledata-count {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .book-slider-img img {
+    width: 240px;
+    height: 350px;
+  }
+
+  .first-banner-txt p {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .theme_dark {
+    padding: 12px 45px;
+  }
+
+  .counter-plus h5 {
+    font-size: 22px;
+  }
+
+  .international-brands p {
+    font-size: 10px;
+  }
+
+
+  .quality-books p {
+    font-size: 10px;
+  }
+
+  .international-brands::before {
+    height: 40px;
+    top: 4px;
+    right: -12px;
+  }
+
+  .quality-books::before {
+    height: 40px;
+    top: 4px;
+    right: -12px;
+  }
+
+  .counter-plus span {
+    font-size: 20px;
+  }
+
+  section.firt-banner-sec {
+    padding: 20px 0px 50px 0px;
+  }
+
+  section.arrival-books-sec {
+    padding: 70px 0px 40px 0px;
+  }
+
+
+  .dress-bg {
+    padding: 40px 34px;
+    border-radius: 10px;
+  }
+
+  .dress-style-img img {
+    height: 160px;
+    border-radius: 10px;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    padding: 0px 0px 35px 0px;
+  }
+
+  .dress-style-img h6 {
+    top: 25px;
+    font-size: 20px;
+  }
+
+  .dress-style-img {
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+  }
+
+  .review-name h4 {
+    font-size: 20px;
+    margin: 6px 0px;
+  }
+
+  .review-card {
+    height: 230px;
+  }
+
+  .review-name h4 svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .subcribe-newsletter-head h2 {
+    font-size: 23px;
+    line-height: 38px;
+  }
+
+  .subscribe-input span {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+  }
+
+  .subcribe-newsletter-form form input {
+    padding: 10px 20px 10px 40px;
+    border-radius: 30px;
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+  }
+
+
+  .subcribe-newsletter-form form button {
+    padding: 8px 10px;
+  }
+
+  .footer-logo {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .footer-logo ul {
+    gap: 10px;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .footer-logo img {
+    padding: 0px 0px 15px 0px;
+  }
+
+  .footer-logo p {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer-logo ul li a {
+    padding: 2px 7px 6px 7px;
+  }
+
+  .product-detail-txt h2 {
+    font-size: 26px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .product-detail-txt h4 {
+    font-size: 26px;
+    color: goldenrod;
+  }
+
+  .product-detail-txt p {
+    font-size: 14px;
+  }
+
+  .product-detail-img img {
+    width: 250px;
+  }
+
+  .about-us-text p {
+    font-size: 16px;
+  }
+
+  .about-us-text h2 {
+    font-size: 40px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .about-img img {
+    padding: 40px 0px 0px 0px;
+    height: 490px;
+  }
+
+
+  .whychooseus-card {
+    padding: 20px 10px;
+  }
+
+  .whychooseus-card h4 {
+    font-size: 18px;
+  }
+
+  .whychooseus-card p {
+    font-size: 14px;
+  }
+
+  .shop-innerbanner {
+    padding: 100px 0px;
+  }
+
+  .shop-banner-text h2 {
+    font-size: 40px;
+  }
+
+  .about-innerbanner {
+    padding: 100px 0px;
+  }
+
+  .about-banner-text h2 {
+    font-size: 40px;
+  }
+
+  .productdetail-banner-text h2 {
+    font-size: 40px;
+  }
+
+  .productdetail-innerbanner {
+    padding: 100px 0px;
+  }
+
+  .contact-banner-text h2 {
+    font-size: 40px;
+  }
+
+  .contact-innerbanner {
+    padding: 100px 0px;
+  }
+
+  .checkout-innerbanner {
+    padding: 100px 0px;
+  }
+
+
+  .checkout-banner-text h2 {
+    font-size: 40px;
+  }
+
+  .order-summary {
+    padding: 20px;
+    background: #ebebeb;
+    border-radius: 7px;
+  }
+
+  .order-summary h3 {
+    font-size: 20px;
+  }
+
+  .input-box label {
+    font-size: 14px;
+  }
+
+  .order-payment h5 {
+    font-size: 18px;
+    font-family: 'sathoshi';
+    margin: 0px;
+  }
+
+  .payment-btn button {
+    margin: 20px 0px 0px 0px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .order-summary ul li span.booknames {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .login-cart-btn {
+    margin: 0px 20px 0px 0px;
+  }
+
+  header.header-main {
+    padding: 10px 0px 8px 0px;
+  }
+
+  .signup-innerbanner {
+    padding: 120px 0px;
+  }
+
+  .signup-banner-text h2 {
+    font-size: 60px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .header-main .container .row .col-lg-4 {
+    display: none;
+  }
+
+  .header-main .container .row .col-lg-5 {
+    display: none;
+  }
+
+  .header-logo img {
+    width: 120px;
+  }
+
+
+  .review-card {
+    height: 250px;
+    text-align: center;
+  }
+
+  .review-name h4 {
+    margin: 10px 0px;
+  }
+
+  .international-brands::before {
+    right: -12px;
+  }
+
+  .subcribe-newsletter-head h2 {
+    font-size: 19px;
+    line-height: 34px;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+  }
+
+  .subcribe-newsletter-form form input {
+    padding: 10px 20px 10px 0px;
+    text-align: center;
+  }
+
+  .subscribe-input span {
+    position: absolute;
+    top: 8px;
+    left: 25px;
+  }
+
+  .footer-logo p {
+    padding: 0px 0px 0px 0px;
+    font-size: 16px;
+  }
+
+
+  .section-heading {
+    font-size: 26px;
+    padding: 0px 0px 35px 0px;
+  }
+
+  .book-card {
+    margin: 0px 30px 30px 30px;
+    padding: 30px 0px 20px 0px;
+    transform: translate(0px, 0px);
+    transition: all 0.6s ease;
+    text-align: center;
+    background: #dfdede57;
+    border-radius: 20px;
+  }
+
+  .book-card img {
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    height: 280px;
+    background: transparent;
+  }
+
+  .card-detail {
+    margin: 20px 10px 10px 10px;
+    padding: 0px 20px;
+  }
+
+  .card-detail h5 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .footer-copyright {
+    flex-direction: column;
+  }
+
+  .footer-links h4 {
+    margin: 20px 0px 16px 0px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .footer-logo {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+  }
+
+  .footer-links {
+    padding: 0px 0px 0px 10px;
+    text-align: center;
+  }
+
+  .footer-logo ul {
+    justify-content: center;
+  }
+
+  .product-detail-txt {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .first-banner-txt {
+    padding: 0px 10px;
+    text-align: center;
+  }
+
+  .first-banner-txt p {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .multipledata-count {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .product-detail-img img {
+    width: 200px;
+    padding: 50px 0px;
+  }
+
+  .cart-counter {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .product-detail-txt .theme_dark {
+    line-height: 20px;
+    padding: 12px 30px 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  section.product-detail-sec {
+    padding: 50px 0px 0px 0px;
+  }
+
+  section.our-customer-reviews {
+    padding: 10px 0px 70px 0px;
+  }
+
+  .payment-section {
+    padding: 50px 10px;
+  }
+
+  .order-summary {
+    margin: 30px 0px 0px 0px;
+  }
+
+  .bg-newsletter {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .about-us-text {
+    padding: 30px 10px 0px 10px;
+    text-align: center;
+  }
+
+  .about-us-text h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .whychooseus-card {
+    padding: 20px 30px;
+    margin: 0px 10px 20px 10px;
+    height: 280px;
+  }
+
+  .whychooseus-card h4 {
+    font-size: 24px;
+    padding: 3px 0px;
+  }
+
+
+  .whychooseus-card p {
+    font-size: 16px;
+  }
+
+  .review-text p {
+    font-size: 16px;
+  }
+
+
+  .contactus-sec .form-main .title h3 {
+    font-size: 32px;
+  }
+
+  .login-innerbanner {
+    padding: 100px 0px;
+  }
+
+  .signup-innerbanner {
+    padding: 100px 0px;
+  }
+  
+  .footer-copyright p {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 480px) {}
